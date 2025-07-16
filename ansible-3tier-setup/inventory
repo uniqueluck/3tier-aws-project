@@ -1,6 +1,5 @@
 [web]
-13.127.217.103 ansible_user=ec2-user ansible_ssh_private_key_file=/home/ec2-user/mykey.pem
+<web_server_public_ip> ansible_user=ec2-user ansible_ssh_private_key_file=/home/ec2-user/your-key.pem
 
 [app]
-10.0.3.96 ansible_user=ec2-user ansible_ssh_private_key_file=/home/ec2-user/mykey.pem ansible_ssh_common_args='-o ProxyCommand="ssh -W %h:%p -i /home/ec2-user/mykey.pem ec2-user@13.127.217.103"'
-
+<app_server_private_ip> ansible_user=ec2-user ansible_ssh_private_key_file=/home/ec2-user/your-key.pem
