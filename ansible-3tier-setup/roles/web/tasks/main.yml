@@ -1,0 +1,31 @@
+- name: Install Nginx
+  become: true
+  yum:
+    name: nginx
+    state: present
+
+- name: Start and enable Nginx
+  become: true
+  systemd:
+    name: nginx
+    state: started
+    enabled: true
+
+- name: Configure Nginx reverse proxy for App server
+  become: true
+  blockinfile:
+    path: /etc/nginx/nginx.conf
+    marker: "# {mark} ANSIBLE MANAGED BLOCK"
+    insertafter: 'server {'
+    block: |
+      location /submit.php {
+          proxy_pass http://{{ groups['app'][0] }};
+      }
+  notify: Restart Nginx
+
+- name: Deploy HTML registration form
+  become: true
+  template:
+    src: index.html.j2
+    dest: /var/www/html/index.html
+

@@ -1,0 +1,45 @@
+---
+- name: Install Apache, PHP, and MySQL client
+  yum:
+    name: "{{ item }}"
+    state: present
+  loop:
+    - httpd
+    - php
+    - php-mysqlnd
+    - mariadb105
+
+- name: Start and enable Apache
+  systemd:
+    name: httpd
+    state: started
+    enabled: true
+
+- name: Deploy submit.php
+  copy:
+    dest: /var/www/html/submit.php
+    content: |
+      <?php
+      $servername = "{{ lookup('env', 'RDS_ENDPOINT') }}";
+      $username = "{{ lookup('env', 'DB_USERNAME') }}";
+      $password = "{{ lookup('env', 'DB_PASSWORD') }}";
+      $dbname = "registrationdb";
+
+      $conn = new mysqli($servername, $username, $password, $dbname);
+
+      if ($conn->connect_error) {
+          die("Connection failed: " . $conn->connect_error);
+      }
+
+      $name = $_POST['name'];
+      $email = $_POST['email'];
+
+      $sql = "INSERT INTO users (name, email) VALUES ('$name', '$email')";
+      if ($conn->query($sql) === TRUE) {
+          echo "Registration successful";
+      } else {
+          echo "Error: " . $sql . "<br>" . $conn->error;
+      }
+
+      $conn->close();
+      ?>
