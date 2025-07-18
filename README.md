@@ -1,5 +1,13 @@
 # 🚀 Deploying a Highly Available 3-Tier Web Architecture on AWS with Terraform & Ansible
 
+
+---
+## 📸 Architecture
+
+<p align="center">
+  <img src="Screenshots/6_architecture_diagram.png" alt="Data Flow Diagram" width="900"/>
+</p>
+
 ---
 
 ## 📖 Table of Contents
@@ -14,11 +22,6 @@
 
 ---
 
-## 📸 Architecture
-
-<p align="center">
-  <img src="Screenshots/6_architecture_diagram.png" alt="Data Flow Diagram" width="900"/>
-</p>
 
 ## 📌 Project Overview
 This beginner-friendly project shows how to deploy a **highly available 3-tier architecture** on AWS using **Terraform** and **Ansible**.
