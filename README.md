@@ -82,7 +82,7 @@ terraform-3tier-project/
 │   └── rds/
 ```
 <p align="center">
-  <img src="images/03-Terraform-Structure.png" alt="Terraform Structure" width="900"/>
+  <img src="Screenshots/ar.png" alt="Terraform Structure" width="900"/>
 </p>
 📖 *Terraform folder and files overview.*
 
