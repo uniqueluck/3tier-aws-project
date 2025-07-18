@@ -133,18 +133,6 @@ ansible-playbook -i inventory site.yml
 📖 *Data entries visible in RDS database.*
 
 ---
-
-## 📸 Screenshots Summary
-| Step                     | Screenshot                                  | Description                             |
-|--------------------------|----------------------------------------------|-----------------------------------------|
-| Launch EC2               | images/01-Launch-EC2.png                    | EC2 instance launch                     |
-| Install Terraform/Ansible| images/02-Install-Terraform-Ansible.png      | Terraform & Ansible installation        |
-| Terraform Files          | images/03-Terraform-Structure.png           | Terraform folder structure              |
-| Terraform Apply          | images/04-Terraform-Apply.png               | Terraform apply result                  |
-| Ansible Playbook         | images/05-Ansible-Playbook.png              | Running Ansible playbook                |
-| Web App                  | images/06-Web-App.png                       | Registration form running               |
-| RDS Database             | images/07-RDS-Entries.png                   | Data entries in RDS                     |
-
 ---
 
 ## 🔗 GitHub Repository
