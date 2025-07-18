@@ -79,17 +79,7 @@ sudo amazon-linux-extras install ansible2 -y
 
 ### 📦 Step 3: Write Terraform Code
 Folder structure:
-```
-terraform-3tier-project/
-├── main.tf
-├── variables.tf
-├── outputs.tf
-├── provider.tf
-├── modules/
-│   ├── vpc/
-│   ├── ec2/
-│   └── rds/
-```
+
 <p align="center">
   <img src="Screenshots/ar.png" alt="Terraform Structure" width="900"/>
 </p>
