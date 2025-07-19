@@ -68,7 +68,7 @@ Login to AWS Console → Search for “EC2” → Launch instance → Amazon Lin
 
 ### ⚙️ Step 2: Install Terraform & Ansible
 SSH into EC2 and run:
-Install Terraform:
+Install Terraform and  Ansible:
 ```bash
 
 sudo yum update -y
@@ -77,14 +77,12 @@ wget https://releases.hashicorp.com/terraform/1.6.0/terraform_1.6.0_linux_amd64.
 unzip terraform_1.6.0_linux_amd64.zip
 sudo mv terraform /usr/local/bin/
 sudo amazon-linux-extras install ansible2 -y
-```
-Install Ansible:
-'''bash
-
-sudo amazon-linux-extras enable ansible2
-sudo yum install ansible -y
 ansible --version
-...
+```
+
+
+
+
 
 
 
