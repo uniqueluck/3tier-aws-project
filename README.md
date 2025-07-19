@@ -119,7 +119,7 @@ cd ansible-3tier-setup
 ansible-playbook -i inventory site.yml
 ```
 <p align="center">
-  <img src="Screenshots/5_ansible_playbook_run.png" alt="Ansible Playbook" width="900"/>
+  <img src="Screenshots/terra.png" alt="Ansible Playbook" width="900"/>
 </p>
 📖 *Ansible playbook applying configurations.*
 
