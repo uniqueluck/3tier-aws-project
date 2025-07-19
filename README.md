@@ -71,13 +71,23 @@ SSH into EC2 and run:
 Install Terraform and  Ansible:
 ```bash
 
+# Update system
 sudo yum update -y
+
+# Install required tools
 sudo yum install -y wget unzip
+
+# Download Terraform binary
 wget https://releases.hashicorp.com/terraform/1.6.0/terraform_1.6.0_linux_amd64.zip
+
+# Unzip and move to path
 unzip terraform_1.6.0_linux_amd64.zip
 sudo mv terraform /usr/local/bin/
+
+# Install Ansible
 sudo amazon-linux-extras install ansible2 -y
 ansible --version
+
 ```
 
 
