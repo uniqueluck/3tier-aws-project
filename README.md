@@ -1,5 +1,9 @@
 # 🚀 Deploying a Highly Available 3-Tier Web Architecture on AWS with Terraform & Ansible
 
+This project demonstrates how to deploy a highly available 3-tier architecture (Web, App, DB) on AWS using Terraform for provisioning and Ansible for configuration management.
+
+Perfect for beginners learning AWS, Infrastructure as Code (IaC), and automation tools.
+
 
 ---
 ## 📸 Architecture
@@ -64,7 +68,9 @@ Login to AWS Console → Search for “EC2” → Launch instance → Amazon Lin
 
 ### ⚙️ Step 2: Install Terraform & Ansible
 SSH into EC2 and run:
+Install Terraform:
 ```bash
+
 sudo yum update -y
 sudo yum install -y wget unzip
 wget https://releases.hashicorp.com/terraform/1.6.0/terraform_1.6.0_linux_amd64.zip
@@ -72,6 +78,13 @@ unzip terraform_1.6.0_linux_amd64.zip
 sudo mv terraform /usr/local/bin/
 sudo amazon-linux-extras install ansible2 -y
 ```
+Install Ansible:
+'''bash
+
+sudo amazon-linux-extras enable ansible2
+sudo yum install ansible -y
+ansible --version
+...
 
 
 
